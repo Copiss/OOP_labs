@@ -17,7 +17,8 @@ public:
     // Виртуальный метод Calc для вычисления интеграла
     virtual double Calc(std::function<double(double)> f, double lowerBound, double upperBound) = 0;
 };
-/// Класс TrapezoidalIntegral, наследник класса Integral, для интегрирования методом трапеций
+
+/// Класс TrapezoidalIntegral (наследник класса Integral) для интегрирования методом трапеций
 class TrapezoidalIntegral : public Integral
 {
 public:
@@ -26,7 +27,8 @@ public:
     // Переопределённый метод Calc для интегрирования методом трапеций
     double Calc(std::function<double(double)> f, double lowerBound, double upperBound) override;
 };
-/// Класс SimpsonIntegral, наследник класса Integral, для интегрирования методом Симпсона
+
+/// Класс SimpsonIntegral (наследник класса Integral) для интегрирования методом Симпсона
 class SimpsonIntegral : public Integral
 {
 public:

@@ -1,11 +1,11 @@
 #include "Integrals.hpp"
-double TrapezoidalIntegral::Calc(std::function<double(double)> f, double lowerBound, double upperBound) // переопределяем функцию Calc для TrapezoidalIntegral
+double TrapezoidalIntegral::Calc(std::function<double(double)> f, double lowerBound, double upperBound) // переопределяем функцию расчёта интеграла Calc для TrapezoidalIntegral
 {
     double integral = 0.0;
     // Проверка корректности переданных параметров
     if (numPoints < 1 || step <= 0.0 || tolerance <= 0.0)
     {
-        std::cerr << "Ошибка: некорректные параметры." << '\n';
+        std::cerr << "Ошибка: некорректные параметры. Попробуйте снова. " << '\n';
         return 0.0;
     }
     double x = lowerBound;
@@ -22,13 +22,13 @@ double TrapezoidalIntegral::Calc(std::function<double(double)> f, double lowerBo
     integral *= h;
     return trunc(integral / tolerance) * tolerance; // выводим с определённой точностью
 }
-double SimpsonIntegral::Calc(std::function<double(double)> f, double lowerBound, double upperBound) // переопределяем функцию Calc для SimpsonIntegral
+double SimpsonIntegral::Calc(std::function<double(double)> f, double lowerBound, double upperBound) // переопределяем функцию расчёта интеграла Calc для SimpsonIntegral
 {
     double integral = 0.0;
     // Проверка корректности переданных параметров
     if (numPoints < 2 || numPoints % 2 != 0 || step <= 0.0 || tolerance <= 0.0)
     {
-        std::cerr << "Ошибка: некорректные параметры." << '\n';
+        std::cerr << "Ошибка: некорректные параметры. Попробуйте ещё раз." << '\n';
         return 0.0;
     }
     double x = lowerBound;
