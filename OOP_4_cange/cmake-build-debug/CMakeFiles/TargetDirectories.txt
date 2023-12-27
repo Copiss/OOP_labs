@@ -1,0 +1,3 @@
+C:/Users/user/Desktop/Prog-frog/OOP_4_cange/cmake-build-debug/CMakeFiles/OOP_4_cange.dir
+C:/Users/user/Desktop/Prog-frog/OOP_4_cange/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/user/Desktop/Prog-frog/OOP_4_cange/cmake-build-debug/CMakeFiles/rebuild_cache.dir
